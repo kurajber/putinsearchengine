@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ruslan+Display');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+body {
+    width: 960px;
+    margin: 0 auto;
+    background-image: url('images/kilim.png');
+    background-repeat: repeat-xy;
+    }
+img {
+    width:30%;
+    height:30%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-25px;
+    margin-bottom:-105px;
+align:center;
+    }
+h1 {font-family: 'Ruslan Display', verdana, cursive; font-size:55px; text-align:center;
+    }
+p {font-family: 'Ubuntu Mono', Verdana; font-size: 35px; text-align: center;
+    }
+input[id="myInput"] {padding: 25px; 
+border:2px solid #ccc; 
+-webkit-border-radius: 5px;
+border-radius: 5px;
+font-family: 'Ubuntu Mono';
+font-size: 25px;
+display: table;
+margin-left: auto;
+margin-right: auto;
+    }
+button[id="myBtn"] {padding: 25px; 
+border: 2px solid #ccc; 
+-webkit-border-radius: 5px;
+border-radius: 5px;
+font-family: 'Ubuntu Mono';
+font-size: 25px;
+display: table;
+margin-left: auto;
+margin-right: auto;
+    }
+</style>
+
+<img src="images/putin.png" alt="putin">
+
+<h1>PUT IN SEARCH ENGINE</h1>
+<p>Type in what you seek and the engine will show you what you need</p>
+
+<input id="myInput" value="I seek...">
+<button id="myBtn" onclick="location.href='https://yandex.com/images/search?text=putin&isize=wallpaper&wp=wh16x9_1920x1080'">SEARCH</button>
+
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("myBtn").click();
+    }
+});
+</script>
+
+</body>
+</html>
